@@ -1,0 +1,8 @@
+Define structure, represented one key (key, letter to show)
+Define class, which build a grid of the specific size with the list of keys
+Define class, which draw the grid on the screen
+    It can change grids of the current layer
+    Go back to the upper level
+    Go to the selected cell and move down to the layer
+
+Future goals: assign a hot key for the specific positions and actions
