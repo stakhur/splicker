@@ -1,8 +1,8 @@
-from keyobject import KeyObject as ko
+from keyobject import KeyObject
 
 
 class KeySet:
-    def __init__(self, keys: list[ko]):
+    def __init__(self, keys: list[KeyObject]):
         self._list = keys
         self._dict = {k.key(): k for k in self._list}
 
@@ -42,15 +42,3 @@ class KeySet:
             return self._dict[key]
         except KeyError:
             return None
-
-
-
-keys = [
-    ko(1, "Q"),
-    ko(2, "W"),
-    ko(3, "E")
-]
-
-ks = KeySet(keys)
-
-print(ks.has_key(1))
