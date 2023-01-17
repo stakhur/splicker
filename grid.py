@@ -58,3 +58,11 @@ class GridWidget(QWidget):
 
     def setGrid(self, x, y, grid):
         pass
+
+
+    def processKeyPressEvent(self, key):
+        if (self._keys.has_key(key)):
+            ind = self._keys.get_index_by_key(key)
+            return self._filled_list[ind]
+        
+        return None
