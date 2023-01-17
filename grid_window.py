@@ -26,4 +26,4 @@ class GridWindow(QMainWindow):
     
     def _initWidget(self):
         self.setCentralWidget(self._grids[self._curr_grid])
-        # self.setAttribute(Qt.WA_TranslucentBackground)
+        self.setAttribute(Qt.WA_TranslucentBackground)
