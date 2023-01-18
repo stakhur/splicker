@@ -1,11 +1,15 @@
-from keyset import KeySet, KeyObject as KO
+import sys
 
-keys = [
-    KO(1, "Q"),
-    KO(2, "W"),
-    KO(3, "E")
-]
+from preset_keyset import preset
+from grid_window import GridWindow
 
-ks = KeySet(keys)
+from PyQt5.QtWidgets import QApplication
 
-print(ks.has_key(1))
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+
+    wnd = GridWindow(preset)    
+    wnd.showFullScreen()
+
+    sys.exit(app.exec_())
